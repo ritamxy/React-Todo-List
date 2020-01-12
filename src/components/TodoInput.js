@@ -17,6 +17,9 @@ class TodoList extends Component {
               placeholder="add a todo item"
             />
           </div>
+          <button type="submit" className="btn btn-block btn-primary mt-3">
+            add item
+          </button>
         </form>
       </div>
     );
