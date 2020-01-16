@@ -1,9 +1,16 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import uuid from "uuid";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faBook,
+  faTrashAlt,
+  faPencilAlt
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faBook, faTrashAlt, faPencilAlt);
 
 class App extends Component {
   render() {
