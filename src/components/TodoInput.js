@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class TodoList extends Component {
   state = {};
   render() {
-    const { item, handleChange, handleSubmit } = this.props;
+    const { item, handleChange, handleSubmit, editItem } = this.props;
     return (
       <div className="card card-body my-3">
         <form onSubmit={handleSubmit}>
@@ -22,8 +22,15 @@ class TodoList extends Component {
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="btn btn-block btn-primary mt-3">
-            add item
+          <button
+            type="submit"
+            className={
+              editItem
+                ? "btn btn-block btn-success mt-3"
+                : "btn btn-block btn-primary mt-3"
+            }
+          >
+            {editItem ? "edit item" : "add item"}
           </button>
         </form>
       </div>
